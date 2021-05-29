@@ -18,7 +18,7 @@ public class AutographBook extends BookDecorator {
 
     @Override
     public String toString() {
-        return super.toString() + " " + autograph;
+        return book.toString() + " | " + autograph;
     }
 
     public String getAutograph() {

@@ -1,2 +1,4 @@
-package org.example;public class Cover {
+package org.example;
+
+public interface Cover {
 }

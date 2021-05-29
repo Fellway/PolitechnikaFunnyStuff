@@ -12,7 +12,6 @@ public class Book implements Publication {
         this.numberOfPages = numberOfPages;
     }
 
-
     @Override
     public String getAuthor() {
         return author;
@@ -30,6 +29,6 @@ public class Book implements Publication {
 
     @Override
     public String toString() {
-        return String.format("| %s | %s | %d |", author, title, numberOfPages);
+        return String.format("| %s | %s | %d ", author, title, numberOfPages);
     }
 }

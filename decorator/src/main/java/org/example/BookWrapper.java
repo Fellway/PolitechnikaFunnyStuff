@@ -17,6 +17,6 @@ public class BookWrapper extends BookDecorator {
 
     @Override
     public String toString() {
-        return super.toString() + " with wrapper on cover";
+        return book.toString() + " | With wrapper ";
     }
 }

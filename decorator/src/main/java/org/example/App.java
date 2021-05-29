@@ -10,6 +10,7 @@ public class App {
 
 //        Publication fakeBook = new BookWrapper(k1);
         Publication kkk2 = new BookWrapper(kk2);
+        System.out.println(kkk2);
 
 //        Publication trash = new BookWrapper(kkk2);
 

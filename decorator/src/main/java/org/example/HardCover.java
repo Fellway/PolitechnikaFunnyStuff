@@ -1,6 +1,6 @@
 package org.example;
 
-public class HardCover extends BookDecorator{
+public class HardCover extends BookDecorator {
 
     private final Publication book;
 
@@ -11,6 +11,6 @@ public class HardCover extends BookDecorator{
 
     @Override
     public String toString() {
-        return super.toString() + " with hard cover";
+        return book.toString() + " | with hard cover";
     }
 }
