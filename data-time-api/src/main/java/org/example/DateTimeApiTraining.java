@@ -60,10 +60,8 @@ public class DateTimeApiTraining {
                 hour++;
             }
 
-            final IntStream hoursDigitsStream = IntStream.of(hour / 10, hour % 10);
-            final IntStream minutesDigitsStream = IntStream.of(minute / 10, minute % 10);
-            int sum = IntStream.concat(hoursDigitsStream, minutesDigitsStream).sum();
-            if (sum == 15) {
+            final int sumOfDigits = IntStream.of(hour / 10, hour % 10, minute / 10, minute % 10).sum();
+            if (sumOfDigits == 15) {
                 counter++;
             }
         }
