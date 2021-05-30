@@ -4,7 +4,7 @@ import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.stream.IntStream;
 
-public class App {
+public class DateTimeApiTraining {
 
     private static final LocalDate START_DATE_OF_WW2 = LocalDate.of(1939, Month.SEPTEMBER, 1);
     private static final LocalDate END_DATE_OF_WW2 = LocalDate.of(1945, Month.SEPTEMBER, 2);
@@ -49,19 +49,19 @@ public class App {
         return numberOfLeapYears;
     }
 
-    public static Integer countClockDigitsWhereSumEquals15(final LocalTime beginningTime, final LocalTime endingTime) {
+    public static int countClockDigitsWhereSumEquals15(final LocalTime beginningTime, final LocalTime endingTime) {
         int l = (int) Duration.between(beginningTime, endingTime).toMinutes();
         int counter = 0;
-        int hours = 0;
-        int minutes;
+        int hour = beginningTime.getHour();
+        int minute;
         for (int i = beginningTime.getMinute(); i < l; i++) {
-            minutes = i % 60;
-            if (minutes == 0) {
-                hours++;
+            minute = i % 60;
+            if (minute == 0) {
+                hour++;
             }
 
-            IntStream hoursDigitsStream = IntStream.of(hours / 10, hours);
-            IntStream minutesDigitsStream = IntStream.of(minutes / 10, minutes);
+            final IntStream hoursDigitsStream = IntStream.of(hour / 10, hour % 10);
+            final IntStream minutesDigitsStream = IntStream.of(minute / 10, minute % 10);
             int sum = IntStream.concat(hoursDigitsStream, minutesDigitsStream).sum();
             if (sum == 15) {
                 counter++;
