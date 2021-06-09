@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+        <RowConstraints minHeight="40.0" prefHeight="40.0" />
+    </rowConstraints>
+    <children>
+        <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Button" GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.rowIndex="18" GridPane.rowSpan="5" />
+        <Button mnemonicParsing="false" prefHeight="280.0" prefWidth="150.0" text="Button" GridPane.columnIndex="12" GridPane.columnSpan="3" GridPane.rowIndex="16" GridPane.rowSpan="7" />
+        <GridPane GridPane.columnIndex="2" GridPane.columnSpan="20" GridPane.rowIndex="1" GridPane.rowSpan="14">
+            <columnConstraints>
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+                <RowConstraints minHeight="40.0" prefHeight="40.0" />
+            </rowConstraints>
+         <children>
+            <Pane prefHeight="560.0" prefWidth="1000.0" style="-fx-background-color: blue;" GridPane.columnSpan="20" GridPane.rowSpan="14">
+               <children>
+                  <Pane layoutX="50.0" layoutY="40.0" prefHeight="360.0" prefWidth="350.0" style="-fx-background-color: red;" />
+                   <Pane layoutX="600.0" layoutY="40.0" prefHeight="360.0" prefWidth="350.0" style="-fx-background-color: red;" />
+               </children>
+            </Pane>
+         </children>
+        </GridPane>
+    </children>
+</GridPane>
