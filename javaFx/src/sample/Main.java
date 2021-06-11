@@ -11,8 +11,10 @@ import javafx.stage.Stage;
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+        Scene scene = new Scene(root, 1200, 960);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 1200, 960));
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 

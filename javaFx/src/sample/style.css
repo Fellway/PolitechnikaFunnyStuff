@@ -1,0 +1,32 @@
+.dashboard {
+    -fx-background-color: black
+}
+
+.left-clock, .right-clock, .fuel-lvl {
+    /*-fx-background-color: red;*/
+}
+
+.left-clock {
+    -fx-background-image: url(speed-clock.png);
+}
+
+.right-clock, .rot-lvl, .fuel-lvl {
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+.right-clock {
+    -fx-background-image: url(rot-clock.png);
+}
+
+.rot-lvl {
+    -fx-background-image: url(rot-lvl.png);
+}
+
+.speed-lvl {
+    -fx-background-image: url(speed-lvl.png);
+}
+
+.fuel-lvl {
+    -fx-background-image: url(fuel-lvl.png);
+}
