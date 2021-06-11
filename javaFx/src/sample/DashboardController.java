@@ -15,9 +15,16 @@ public class DashboardController implements Initializable {
     private Arc speedLvl;
 
     @FXML
+    private Arc rotLvl;
+
+    @FXML
     private Button gasPedal;
 
-    private GasPedalThread thread;
+    @FXML
+    private Button breakPedal;
+
+
+    private PedalsThread thread;
 
 
     @FXML
@@ -27,7 +34,7 @@ public class DashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        thread = new GasPedalThread(speedLvl, gasPedal);
+        thread = new PedalsThread(speedLvl, gasPedal, breakPedal, rotLvl);
         thread.start();
     }
 

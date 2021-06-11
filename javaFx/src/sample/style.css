@@ -2,7 +2,7 @@
     -fx-background-color: black
 }
 
-.left-clock, .right-clock, .fuel-lvl {
+.left-clock, .right-clock, .fuel-lvl, .rot-lvl {
     /*-fx-background-color: red;*/
 }
 
