@@ -30,3 +30,21 @@
 .fuel-lvl {
     -fx-background-image: url(fuel-lvl.png);
 }
+
+.break-pedal {
+    -fx-background-image: url(break-pedal.png);
+    -fx-background-color: transparent;
+}
+
+.break-pedal:pressed {
+    -fx-background-image: url(break-pedal-pressed.png);
+}
+
+.gas-pedal {
+    -fx-background-image: url(gas-pedal.png);
+    -fx-background-color: transparent;
+}
+
+.gas-pedal:pressed {
+    -fx-background-image: url(gas-pedal-pressed.png);
+}

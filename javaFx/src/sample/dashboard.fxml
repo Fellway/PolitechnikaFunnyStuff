@@ -58,8 +58,8 @@
         <RowConstraints minHeight="40.0" prefHeight="40.0" />
     </rowConstraints>
     <children>
-        <Button fx:id="breakPedal" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Button" GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.rowIndex="18" GridPane.rowSpan="5" />
-        <Button fx:id="gasPedal" mnemonicParsing="false" onMousePressed="#calculateSpeed" prefHeight="280.0" prefWidth="150.0" text="Button" GridPane.columnIndex="12" GridPane.columnSpan="3" GridPane.rowIndex="16" GridPane.rowSpan="7" />
+        <Button fx:id="breakPedal" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="break-pedal" GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.rowIndex="18" GridPane.rowSpan="5" />
+        <Button fx:id="gasPedal" mnemonicParsing="false" onMousePressed="#calculateSpeed" prefHeight="280.0" prefWidth="150.0" styleClass="gas-pedal" GridPane.columnIndex="12" GridPane.columnSpan="3" GridPane.rowIndex="16" GridPane.rowSpan="7" />
         <GridPane stylesheets="@style.css" GridPane.columnIndex="2" GridPane.columnSpan="20" GridPane.rowIndex="1" GridPane.rowSpan="14">
             <columnConstraints>
                 <ColumnConstraints minWidth="50.0" prefWidth="50.0" />
