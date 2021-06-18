@@ -1,50 +1,75 @@
 .dashboard {
-    -fx-background-color: black
-}
-
-.left-clock, .right-clock, .fuel-lvl, .rot-lvl {
-    /*-fx-background-color: red;*/
+    -fx-background-color: black;
+    -fx-border-radius: 50px;
 }
 
 .left-clock {
-    -fx-background-image: url(speed-clock.png);
+    -fx-background-image: url(assets/speed-clock.png);
 }
 
-.right-clock, .rot-lvl, .fuel-lvl {
+.right-clock, .rot-lvl, .fuel-lvl, .temp-lvl {
     -fx-background-repeat: stretch;
     -fx-background-position: center center;
 }
 
 .right-clock {
-    -fx-background-image: url(rot-clock.png);
+    -fx-background-image: url(assets/rot-clock.png);
 }
 
 .rot-lvl {
-    -fx-background-image: url(rot-lvl.png);
+    -fx-background-image: url(assets/rot-lvl.png);
 }
 
 .speed-lvl {
-    -fx-background-image: url(speed-lvl.png);
+    -fx-background-image: url(assets/speed-lvl.png);
 }
 
 .fuel-lvl {
-    -fx-background-image: url(fuel-lvl.png);
+    -fx-background-image: url(assets/fuel-lvl.png);
+}
+
+.temp-lvl {
+    -fx-background-image: url(assets/temp.png);
 }
 
 .break-pedal {
-    -fx-background-image: url(break-pedal.png);
+    -fx-background-image: url(assets/break-pedal.png);
     -fx-background-color: transparent;
 }
 
 .break-pedal:pressed {
-    -fx-background-image: url(break-pedal-pressed.png);
+    -fx-background-image: url(assets/break-pedal-pressed.png);
 }
 
 .gas-pedal {
-    -fx-background-image: url(gas-pedal.png);
+    -fx-background-image: url(assets/gas-pedal.png);
     -fx-background-color: transparent;
 }
 
 .gas-pedal:pressed {
-    -fx-background-image: url(gas-pedal-pressed.png);
+    -fx-background-image: url(assets/gas-pedal-pressed.png);
+}
+
+.right-arrow {
+    -fx-background-image: url(assets/right.png);
+}
+
+.right-arrow:selected {
+    -fx-background-image: url(assets/right-active.png);
+}
+
+.left-arrow {
+    -fx-background-image: url(assets/left.png);
+}
+
+.left-arrow:selected {
+    -fx-background-image: url(assets/left-active.png);
+}
+
+.blinker {
+    -fx-background-image: url(assets/blinker.png);
+}
+
+.invisible-button {
+    -fx-background-color: none;
 }
