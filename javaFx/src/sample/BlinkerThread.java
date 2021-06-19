@@ -18,14 +18,14 @@ public class BlinkerThread extends Thread {
     @Override
     public void run() {
         while (true) {
-            if (isRightActive) {
+            if (isRightActive && !isLeftActive) {
                 rightArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
                 threadSleep(400);
                 rightArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
                 threadSleep(50);
             }
 
-            if (isLeftActive) {
+            if (isLeftActive && !isRightActive) {
                 leftArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
                 threadSleep(400);
                 leftArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
@@ -35,6 +35,15 @@ public class BlinkerThread extends Thread {
             if (!isLeftActive && !isRightActive) {
                 rightArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
                 leftArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+            }
+
+            if (isLeftActive && isRightActive) {
+                rightArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
+                leftArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
+                threadSleep(400);
+                rightArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+                leftArrow.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+                threadSleep(50);
             }
 
             threadSleep(500);
@@ -62,5 +71,14 @@ public class BlinkerThread extends Thread {
     public void disable() {
         isRightActive = false;
         isLeftActive = false;
+    }
+
+    public void emergencyToggle() {
+        isRightActive = !isRightActive;
+        isLeftActive = !isLeftActive;
+    }
+
+    public boolean isEmergencyOn() {
+        return isLeftActive && isRightActive;
     }
 }

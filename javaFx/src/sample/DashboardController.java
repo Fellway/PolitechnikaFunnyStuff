@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -13,7 +14,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
-
 
     @FXML
     private Arc speedLvl;
@@ -35,40 +35,81 @@ public class DashboardController implements Initializable {
 
     @FXML
     private Pane leftArrow;
+
+    @FXML
+    private Button startStop;
+
+    @FXML
+    private Button emergencyLights;
+
+    private boolean isEngineOn = false;
     private BlinkerThread blinkerThread;
-    private MediaPlayer mediaPlayer;
+    private PedalsThread pedalsThread;
+    private MediaPlayer blinkerSound;
+    private MediaPlayer carStartSound;
+    private MediaPlayer carStopSound;
 
     @FXML
     private void blinkRight() {
         blinker.rotateProperty().setValue(10);
         blinkerThread.setRightActive();
-        mediaPlayer.play();
+        blinkerSound.play();
     }
 
     @FXML
     private void blinkLeft() {
         blinker.rotateProperty().setValue(-10);
         blinkerThread.setLeftActive();
-        mediaPlayer.play();
+        blinkerSound.play();
     }
 
     @FXML
     private void blinkNone() {
         blinker.rotateProperty().setValue(0);
         blinkerThread.disable();
-        mediaPlayer.stop();
+        blinkerSound.stop();
+    }
+
+    @FXML
+    private void emergencyLights() {
+        blinkerThread.emergencyToggle();
+        if (blinkerThread.isEmergencyOn()) {
+            blinkerSound.play();
+            emergencyLights.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
+        } else {
+            blinkerSound.stop();
+            emergencyLights.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+        }
+    }
+
+    @FXML
+    private void engineToggle() {
+        isEngineOn = !isEngineOn;
+        startStop.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), isEngineOn);
+        gasPedal.setDisable(!isEngineOn);
+        if(!isEngineOn) {
+            carStartSound.play();
+            carStopSound.stop();
+        } else {
+            carStopSound.play();
+            carStartSound.stop();
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        String s = new File("src/sample/assets/blinker_sound.mp3").toURI().toString();
-        Media sound = new Media(s);
-        this.mediaPlayer = new MediaPlayer(sound);
-        PedalsThread thread = new PedalsThread(speedLvl, gasPedal, breakPedal, rotLvl);
+        String blinkerSoundPath = new File("src/sample/assets/blinker_sound.mp3").toURI().toString();
+        String startSoundPath = new File("src/sample/assets/car_start_sound.mp3").toURI().toString();
+        String stopSoundPath = new File("src/sample/assets/car_stop_sound.mp3").toURI().toString();
+        Media blinkerSound = new Media(blinkerSoundPath);
+        Media engineStartSound = new Media(startSoundPath);
+        Media engineStopSound = new Media(stopSoundPath);
+        this.blinkerSound = new MediaPlayer(blinkerSound);
+        this.carStopSound = new MediaPlayer(engineStartSound);
+        this.carStartSound = new MediaPlayer(engineStopSound);
+        this.pedalsThread = new PedalsThread(speedLvl, gasPedal, breakPedal, rotLvl);
         this.blinkerThread = new BlinkerThread(leftArrow, rightArrow);
-        thread.start();
         blinkerThread.start();
+        pedalsThread.start();
     }
-
-
 }

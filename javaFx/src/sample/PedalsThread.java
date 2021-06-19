@@ -59,12 +59,12 @@ public class PedalsThread extends Thread {
     private void accelerateCar() {
         if (currentSpeed > SPEED_LVL_MIN_ANGLE) {
             speedLevel.setLength(currentSpeed -= ACCELERATION);
-            if(currentRot > ROT_LVL_MIN_ANGLE) {
+            if (currentRot > ROT_LVL_MIN_ANGLE) {
                 rotLvl.setLength(currentRot -= ROT_LVL_SPEED);
             }
         }
 
-        if(currentRot <= GEAR_CHANGE_ROT_LVL) {
+        if (currentRot <= GEAR_CHANGE_ROT_LVL) {
             speedLevel.setLength(currentSpeed += 5.0);
             rotLvl.setLength(currentRot += 120.0);
         }

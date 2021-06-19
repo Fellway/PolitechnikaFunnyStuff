@@ -70,6 +70,24 @@
     -fx-background-image: url(assets/blinker.png);
 }
 
+.start-stop {
+    -fx-background-image: url(assets/start_on.png);
+    -fx-background-color: transparent;
+}
+
+.start-stop:selected {
+    -fx-background-image: url(assets/start_off.png);
+}
+
+.emergency {
+    -fx-background-image: url(assets/emergency_off.png);
+    -fx-background-color: transparent;
+}
+
+.emergency:selected {
+    -fx-background-image: url(assets/emergency_on.png);
+}
+
 .invisible-button {
     -fx-background-color: none;
 }
